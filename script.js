@@ -44,7 +44,14 @@ function addEventListeners() {
     const optionButtons = document.querySelectorAll('.option-button');
     optionButtons.forEach(button => {
         button.addEventListener('click', function() {
-            const option = this.classList.contains('yes-button') ? 'yes' : 'no';
+            let option;
+            if (this.classList.contains('yes-button')) {
+                option = 'yes';
+            } else if (this.classList.contains('no-button')) {
+                option = 'no';
+            } else if (this.classList.contains('notsure-button')) {
+                option = 'notsure';
+            }
             selectOption(option);
         });
     });
@@ -70,9 +77,14 @@ function selectOption(option) {
     allButtons.forEach(button => button.classList.remove('selected'));
     
     // Add selected class to the clicked button
-    const selectedButton = option === 'yes' ? 
-        document.querySelector('.yes-button') : 
-        document.querySelector('.no-button');
+    let selectedButton;
+    if (option === 'yes') {
+        selectedButton = document.querySelector('.yes-button');
+    } else if (option === 'no') {
+        selectedButton = document.querySelector('.no-button');
+    } else if (option === 'notsure') {
+        selectedButton = document.querySelector('.notsure-button');
+    }
     
     if (selectedButton) {
         selectedButton.classList.add('selected');
@@ -96,9 +108,14 @@ function proceedToNextStep(choice) {
     
     // You would typically redirect to the next page or update content here
     // For demo purposes, we'll just show an alert
-    const message = choice === 'yes' ? 
-        'Great! We\'ll show you medical coverage plans.' : 
-        'We\'ll focus on other coverage options for you.';
+    let message;
+    if (choice === 'yes') {
+        message = 'Great! We\'ll show you medical coverage plans.';
+    } else if (choice === 'no') {
+        message = 'We\'ll focus on other coverage options for you.';
+    } else if (choice === 'notsure') {
+        message = 'No problem! We\'ll help you explore your options.';
+    }
     
     // Show a subtle notification instead of alert
     showNotification(message);
@@ -154,9 +171,14 @@ function loadSavedProgress() {
             // Restore medical coverage choice if available
             if (progressData.medicalCoverageChoice) {
                 const option = progressData.medicalCoverageChoice;
-                const button = option === 'yes' ? 
-                    document.querySelector('.yes-button') : 
-                    document.querySelector('.no-button');
+                let button;
+                if (option === 'yes') {
+                    button = document.querySelector('.yes-button');
+                } else if (option === 'no') {
+                    button = document.querySelector('.no-button');
+                } else if (option === 'notsure') {
+                    button = document.querySelector('.notsure-button');
+                }
                 
                 if (button) {
                     button.classList.add('selected');
