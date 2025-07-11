@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="skinGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f4c2a1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e5b28d;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7b2cbf;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9d4edd;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="60" cy="60" r="55" fill="#f8f8f8" stroke="#e0e0e0" stroke-width="2"/>
+  
+  <!-- Hand illustration -->
+  <g transform="translate(30,30)">
+    <!-- Palm -->
+    <ellipse cx="30" cy="35" rx="15" ry="20" fill="url(#skinGradient)"/>
+    
+    <!-- Thumb -->
+    <ellipse cx="15" cy="30" rx="6" ry="12" fill="url(#skinGradient)" transform="rotate(-20 15 30)"/>
+    
+    <!-- Index finger -->
+    <ellipse cx="22" cy="18" rx="3.5" ry="10" fill="url(#skinGradient)"/>
+    
+    <!-- Middle finger -->
+    <ellipse cx="30" cy="15" rx="3.5" ry="12" fill="url(#skinGradient)"/>
+    
+    <!-- Ring finger -->
+    <ellipse cx="38" cy="17" rx="3.5" ry="11" fill="url(#skinGradient)"/>
+    
+    <!-- Pinky finger -->
+    <ellipse cx="45" cy="20" rx="3" ry="9" fill="url(#skinGradient)"/>
+    
+    <!-- Heart floating above palm -->
+    <g transform="translate(30,28)">
+      <path d="M0 4c-3-7-12-7-12 2 0 4 12 15 12 15s12-11 12-15c0-9-9-9-12-2z" 
+            fill="url(#heartGradient)" 
+            stroke="white" 
+            stroke-width="1"/>
+    </g>
+    
+    <!-- Subtle highlights for dimension -->
+    <ellipse cx="27" cy="32" rx="3" ry="4" fill="white" opacity="0.3"/>
+    <ellipse cx="18" cy="28" rx="2" ry="3" fill="white" opacity="0.3"/>
+  </g>
+  
+  <!-- Decorative elements around the hand -->
+  <g fill="url(#heartGradient)" opacity="0.2">
+    <circle cx="25" cy="25" r="2"/>
+    <circle cx="95" cy="30" r="1.5"/>
+    <circle cx="20" cy="90" r="1"/>
+    <circle cx="100" cy="85" r="2"/>
+  </g>
+</svg>

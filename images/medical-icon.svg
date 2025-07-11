@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <defs>
+    <linearGradient id="medicalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7b2cbf;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9d4edd;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="40" cy="40" r="35" fill="url(#medicalGradient)" opacity="0.1"/>
+  
+  <!-- Medical cross/heart icon -->
+  <g transform="translate(40,40)">
+    <!-- Heart shape -->
+    <path d="M0 5c-3-8-15-8-15 2 0 4 15 18 15 18s15-14 15-18c0-10-12-10-15-2z" 
+          fill="url(#medicalGradient)" 
+          transform="scale(0.8) translate(0,-5)"/>
+    
+    <!-- Medical cross overlay -->
+    <rect x="-2" y="-12" width="4" height="24" fill="white" opacity="0.9"/>
+    <rect x="-12" y="-2" width="24" height="4" fill="white" opacity="0.9"/>
+  </g>
+  
+  <!-- Decorative elements -->
+  <circle cx="20" cy="20" r="2" fill="url(#medicalGradient)" opacity="0.3"/>
+  <circle cx="60" cy="25" r="1.5" fill="url(#medicalGradient)" opacity="0.3"/>
+  <circle cx="25" cy="60" r="1" fill="url(#medicalGradient)" opacity="0.3"/>
+</svg>

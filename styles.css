@@ -1,0 +1,459 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-top {
+    background: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 8px 0;
+}
+
+.header-top-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.language-help {
+    display: flex;
+    gap: 20px;
+}
+
+.language-link, .print-link, .help-link {
+    color: #7b2cbf;
+    text-decoration: none;
+}
+
+.language-link:hover, .print-link:hover, .help-link:hover {
+    text-decoration: underline;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+}
+
+.phone-number {
+    color: #7b2cbf;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.phone-number:hover {
+    text-decoration: underline;
+}
+
+.tty {
+    color: #888;
+}
+
+.header-main {
+    padding: 15px 0;
+}
+
+.header-main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aetna-logo {
+    height: 40px;
+    width: auto;
+}
+
+.location-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.edit-location {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.edit-location:hover {
+    background: #f0f0f0;
+}
+
+/* Navigation */
+.navigation {
+    background: #7b2cbf;
+    padding: 0;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50px;
+}
+
+.nav-tabs {
+    display: flex;
+}
+
+.nav-tab {
+    background: none;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-tab:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.nav-tab.active {
+    border-bottom-color: #fff;
+    background: rgba(255,255,255,0.1);
+}
+
+.save-progress {
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.5);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.save-progress:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+/* Progress Bar */
+.progress-container {
+    background: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.progress-bar {
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+}
+
+.progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.step-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.progress-step.completed .step-circle {
+    background: #7b2cbf;
+    color: white;
+}
+
+.progress-step.current .step-circle {
+    border: 2px solid #7b2cbf;
+    background: white;
+    color: #7b2cbf;
+}
+
+.step-label {
+    font-size: 14px;
+    color: #666;
+}
+
+.progress-step.completed .step-label {
+    color: #333;
+}
+
+.progress-line {
+    flex: 1;
+    height: 2px;
+    background: #e0e0e0;
+    margin: 0 20px;
+    position: relative;
+    top: -15px;
+}
+
+/* Main Content */
+.main-content {
+    padding: 60px 0;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.question-container {
+    background: white;
+    border-radius: 8px;
+    padding: 60px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.question-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.question-icon {
+    flex-shrink: 0;
+}
+
+.medical-icon {
+    width: 120px;
+    height: 120px;
+}
+
+.question-content {
+    flex: 1;
+}
+
+.question-title {
+    font-size: 36px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.question-description {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.answer-options {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.option-button {
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 30px 50px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    transition: all 0.3s ease;
+    min-width: 150px;
+}
+
+.option-button:hover {
+    border-color: #7b2cbf;
+    background: #f8f5ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(123, 44, 191, 0.2);
+}
+
+.option-button.selected {
+    background: #7b2cbf;
+    color: white;
+    border-color: #7b2cbf;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: #ccc;
+    padding: 40px 0 20px;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-section h3 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.footer-phone {
+    color: #7b2cbf;
+    text-decoration: none;
+}
+
+.footer-phone:hover {
+    text-decoration: underline;
+}
+
+.footer-link-list {
+    list-style: none;
+}
+
+.footer-link-list li {
+    margin-bottom: 8px;
+}
+
+.footer-link-list a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-link-list a:hover {
+    color: #7b2cbf;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid #555;
+    padding-top: 20px;
+    font-size: 14px;
+}
+
+.language-services {
+    margin-top: 15px;
+}
+
+.language-links {
+    margin-top: 8px;
+}
+
+.language-links a {
+    color: #7b2cbf;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.language-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .header-top-content {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .header-main-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .nav-content {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 0;
+    }
+    
+    .question-container {
+        padding: 30px 20px;
+        margin: 20px;
+    }
+    
+    .question-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .question-title {
+        font-size: 28px;
+    }
+    
+    .answer-options {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .option-button {
+        padding: 20px 30px;
+        font-size: 20px;
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .progress-bar {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .question-title {
+        font-size: 24px;
+    }
+    
+    .question-description {
+        font-size: 16px;
+    }
+    
+    .option-button {
+        padding: 15px 25px;
+        font-size: 18px;
+    }
+}
